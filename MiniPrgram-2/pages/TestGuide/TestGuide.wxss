@@ -1,0 +1,10 @@
+/* TestGuide.wxss */
+
+/* @import "../commonWxss/common.wxss";
+.middle-p {
+  padding: 15px
+} */
+
+.tagnameTTTT {
+  margin-top: 50px;
+}
