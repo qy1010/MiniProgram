@@ -142,6 +142,13 @@ Page({
     },
 
     loginFunc: function (uname, pwd, u_openid, wxnickname) {
+
+        wx.switchTab({
+          url: '../home/home',
+        })
+        return;
+
+
         if (uname === '' && pwd === '') {
             wx.showToast({
                 title: '不能为空',
