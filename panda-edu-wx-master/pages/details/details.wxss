@@ -1,0 +1,281 @@
+/* pages/detais/details.wxss */
+@import "../../styles/weui.wxss";
+/* @import "../../styles/animation.wxss"; */
+page {
+  background-color: white;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+.page-body{
+  padding-top: 10rpx;
+}
+.page-section{
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+.page-section_center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-section:last-child{
+  margin-bottom: 0;
+}
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+/*保证grid的形状不会拉伸*/
+.page-section-spacing{
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.page-section-title{
+  font-size: 28rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.page-section-gap .page-section-title{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.demo-text-1{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #1AAD19;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+.demo-text-1:before{
+  content: 'A';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.demo-text-2{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #2782D7;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+.demo-text-2:before{
+  content: 'B';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.demo-text-3{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F1F1;
+  color: #353535;
+  font-size: 36rpx;
+}
+.demo-text-3:before{
+  content: 'C';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button{
+  margin-bottom: 30rpx;
+}
+button:last-child{
+  margin-bottom: 0;
+}
+.page-section-title{
+  padding: 0;
+}
+.swiper-item{
+  display: block;
+  height: 10%;
+}
+.page-section-title{
+  margin-top: 60rpx;
+  position: relative;
+}
+.info{
+  position: absolute;
+  right: 0;
+  color: #353535;
+  font-size: 30rpx;
+}
+.page-foot{
+  margin-top: 50rpx;
+}
+/*重写.weui-grids去掉边框*/
+.weui-grids{
+  border: none;
+}
+/*重写weui-grid保证其大小*/
+.weui-grid{
+  background-color:white; 
+  margin-left:4%;  
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 45%;
+  height: 350rpx;
+  /* border: none; */
+  border: 2px #AEEEEE dashed;  
+  border-radius: 10%; 
+}
+/*重写weui-grid__icon保证图片大小*/
+.weui-grid__icon{
+  padding-top: 50rpx; 
+  height: 420rpx;
+  width: 420rpx;
+}
+/*重写weui-grid__label保证字体合适*/
+.weui-grid__label{
+  font-family: 'DroidSans121c3335501cd96';
+  margin-top:30rpx;
+  font-size:75rpx;
+  color: #FFD700;
+  font-weight: bold;
+  height: 200rpx;
+}
+/*重写swiper保证首页占满屏幕*/
+swiper{
+  height: 950rpx;
+}
+/*重写weui-grid_active实现点击放大效果*/
+.weui-grid_active{
+  background-color: #B0E0E6;
+  transform:scale(1.1);
+  -ms-transform:scale(1.1);
+  -webkit-transform:scale(1.1);
+  -o-transform:scale(1.1);
+  -moz-transform:scale(1.1);
+}
+/*详情圆形展示*/
+.weui-article__p {
+  margin: 0;
+  /* background-color: #AEEEEE; */
+  width: 550rpx;
+  height: 550rpx;
+  border-radius: 50%;
+}
+/*光环效果 holo*/
+.holo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.holo:after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 650rpx;
+  height: 650rpx;
+  left: -325rpx;
+  top: -260rpx;
+  border-radius: 50%;
+  animation-name: Grow; 
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.holo:before {
+  box-shadow: 0px 0px 100px 6px #AEEEEE;
+}
+.holo:after {
+  box-shadow: inset 0px 0px 100px 6px #AEEEEE;
+}
+@keyframes Grow {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+/*自定义一个椭圆*/
+.ellipse-v{
+  margin-top: 30rpx;
+  height: 35rpx;
+  width: 190rpx;
+  border-radius: 50%;
+  background: #A1A1A1;
+}
+/*重写weui-article__section内容居中*/
+.weui-article__section{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+/*保证内容居中*/
+.weui-article {
+  padding: 0;
+}
+/*外侧圆环边框*/
+.border-cicle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600rpx;
+  height: 600rpx;
+  border: 10rpx #B0E0E6 dashed;
+  border-radius: 50%;
+}
+/*重写wxParse-p是内容居中*/
+.wxParse-p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*内容简介，使内容更丰满*/
+.know_desc{
+  font-family: 'DroidSans121c3335501cd96';
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  color: #FFD700;
+}
+/*快速翻页样式*/
+.slider-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60rpx;
+  color: #999999;
+}
+.slider-text{
+  /*float: left;*/
+  margin-left: 10rpx; 
+  color:#5F9EA0;
+}
+.slider{
+  padding-left: 90rpx;
+  padding-right: 90rpx;
+}
